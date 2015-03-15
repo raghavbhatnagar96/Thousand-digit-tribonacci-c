@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-int **matrixmult(int **matrix, int **matrix2)
+int **matrixmult(int **matrix, int **matrix2)//multiply 2 matrix
 {
 	int **newmatrix;
 	int i, sum, j, k;
@@ -26,7 +26,7 @@ int **matrixmult(int **matrix, int **matrix2)
 	return newmatrix;
 }			
 
-void divideby2(int *number, int remainder, int index, int size)
+void divideby2(int *number, int remainder, int index, int size)//divide the 1000 digit number by 2
 {
 	if(index==size)
 	{
@@ -39,26 +39,7 @@ void divideby2(int *number, int remainder, int index, int size)
 	divideby2(number, remainder, index+1, size);
 }
 
-	
-/*int one(int *number, int size)
-{
-	
-	int i;
-	for(i=0;i<size-1;++i)
-	{
-		if(number[i]!=0)
-		{
-			return 0;
-		}
-	}
-	if(number[i]==1)
-	{
-		return 1;
-	}
-	return 0;
-}*/
-
-int zero(int *number, int size)
+int zero(int *number, int size)//is the 1000 digit number now 0
 {
 	int i, sum=0;
 	for(i=0;i<size;i++)
@@ -80,7 +61,7 @@ int Odd(int * number, int size)
 	return (number[size-1]%2);
 }
 
-int **matrixpow(int **matrix, int *number, int size)
+int **matrixpow(int **matrix, int *number, int size)//power of a matrix by number
 {
 	int **matrix2;
 	int i;
@@ -117,7 +98,7 @@ int main(int argc, char **argv)
 	number = (int*)malloc(1000*sizeof(int));
 	int **final;//
 	input = fopen(argv[1], "r");
-	fscanf(input, "%d\n", &a);//start file reading 
+	fscanf(input, "%d\n", &a);//start file reading f(0)=a;f(1)=b;f(2)=c
 	fscanf(input, "%d\n", &b);
 	fscanf(input, "%d\n", &c);
 	while(!feof(input))
